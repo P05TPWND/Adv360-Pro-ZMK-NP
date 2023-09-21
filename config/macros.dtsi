@@ -1,8 +1,8 @@
-macro_whitespace: macro_whitespace{
+macro_macro_tags: macro_macro_tags{
 compatible = "zmk,behavior-macro";
-label = "macro_whitespace";
+label = "macro_macro_tags";
 #binding-cells = <0>;
-bindings = <&kp A>;
+bindings = <&kp LESS_THAN>, <&kp GREATER_THAN>, <&kp LESS_THAN>, <&kp SLASH>, <&kp GREATER_THAN>, <&kp LEFT_ARROW>, <&kp LEFT_ARROW>, <&kp LEFT_ARROW>, <&kp LEFT_ARROW>;
 };
 macro_vimsave: macro_vimsave{
 compatible = "zmk,behavior-macro";
