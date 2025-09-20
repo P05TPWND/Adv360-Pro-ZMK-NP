@@ -21,6 +21,29 @@
         };
     };
 
+    macros {
+        vimquit: vimquit {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp ESCAPE &kp COLON &kp Q &kp EXCLAMATION &kp ENTER>;
+            label = "VIMQUIT";
+        };
+
+        vimsave: vimsave {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp ESCAPE &kp COLON &kp W &kp Q &kp EXCLAMATION &kp ENTER>;
+            label = "VIMSAVE";
+        };
+
+        vim_showNum: vim_showNum {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp ESCAPE &kp COLON &kp S &kp E &kp T &kp N &kp U &kp M &kp RET>;
+            label = "VIM_SHOWNUM";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
