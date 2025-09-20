@@ -53,7 +53,7 @@
 &trans  &trans     &trans  &trans              &trans         &trans  &none                                       &none   &trans  &trans  &trans  &trans   &trans   &trans
 &trans  &kp LC(A)  &trans  &kp LC(E)           &trans         &trans  &none   &trans  &trans      &trans  &trans  &none   &trans  &trans  &trans  &trans   &trans   &trans
 &trans  &trans     &trans  &kp LC(UP_ARROW)    &trans         &trans                  &trans      &trans                  &trans  &trans  &trans  &trans   &trans   &trans
-&trans  &tog 4     &tog 5  &kp LC(LEFT_ARROW)  &kp LC(RIGHT)          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans   &trans   &trans
+&trans  &tog 7     &tog 8  &kp LC(LEFT_ARROW)  &kp LC(RIGHT)          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans   &trans   &trans
             >;
         };
 
@@ -65,6 +65,36 @@
 &studio_unlock  &none         &none         &none         &none         &none         &none        &none  &none      &bt BT_CLR  &none       &none            &none  &none       &none       &none  &none  &none
 &none           &none         &none         &none         &none         &none                             &none      &none                                    &none  &none       &none       &none  &none  &none
 &none           &none         &none         &none         &none                       &none        &none  &none      &none       &bl BL_TOG  &rgb_ug RGB_TOG         &bl BL_INC  &bl BL_DEC  &none  &none  &none
+            >;
+        };
+
+        Shortcuts {
+            bindings = <
+&trans  &kp LC(LA(LEFT))      &kp LA(LG(RIGHT))     &kp LA(LC(E))  &kp LA(LC(T))  &kp LA(LC(I))  &trans                                             &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans                &trans                &trans         &kp LA(LC(D))  &kp LA(LC(K))  &trans                                             &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LS(LG(NUMBER_3))  &kp LS(LG(NUMBER_4))  &trans         &kp LA(LC(F))  &kp LA(LC(U))  &kp LS(LG(V))  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans                &trans                &trans         &kp LA(LC(G))  &kp LA(LC(J))                         &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans                &trans                &trans         &trans                        &trans         &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        Game_mode {
+            bindings = <
+&trans     &kp N1  &kp N2    &kp N3     &kp N4  &kp N5  &trans                                               &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans     &kp Q   &kp W     &kp E      &kp R   &kp T   &trans                                               &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans     &kp A   &kp S     &kp D      &kp F   &kp G   &trans     &kp LGUI   &kp LALT       &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp LSHFT  &kp Z   &kp X     &kp C      &kp V   &kp B                         &kp LCTRL      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans     &trans  &kp LEFT  &kp RIGHT  &kp M           &kp SPACE  &kp ENTER  &trans         &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        nvim_shortcuts {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
 
@@ -86,26 +116,6 @@
         extra4 {
             display-name = "Yellow";
             status = "reserved";
-        };
-
-        Shortcuts {
-            bindings = <
-&trans  &kp LC(LA(LEFT))      &kp LA(LG(RIGHT))     &kp LA(LC(E))  &kp LA(LC(T))  &kp LA(LC(I))  &trans                                             &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans                &trans                &trans         &kp LA(LC(D))  &kp LA(LC(K))  &trans                                             &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LS(LG(NUMBER_3))  &kp LS(LG(NUMBER_4))  &trans         &kp LA(LC(F))  &kp LA(LC(U))  &kp LS(LG(V))  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans                &trans                &trans         &kp LA(LC(G))  &kp LA(LC(J))                         &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans                &trans                &trans         &trans                        &trans         &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
-            >;
-        };
-
-        Game_mode {
-            bindings = <
-&trans     &kp N1  &kp N2    &kp N3     &kp N4  &kp N5  &trans                                               &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans     &kp Q   &kp W     &kp E      &kp R   &kp T   &trans                                               &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans     &kp A   &kp S     &kp D      &kp F   &kp G   &trans     &kp LGUI   &kp LALT       &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&kp LSHFT  &kp Z   &kp X     &kp C      &kp V   &kp B                         &kp LCTRL      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans     &trans  &kp LEFT  &kp RIGHT  &kp M           &kp SPACE  &kp ENTER  &trans         &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
-            >;
         };
     };
 };
