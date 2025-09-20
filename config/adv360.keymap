@@ -42,6 +42,27 @@
             bindings = <&kp ESCAPE &kp COLON &kp S &kp E &kp T &kp N &kp U &kp M &kp RET>;
             label = "VIM_SHOWNUM";
         };
+
+        nvim_splitTerminal: nvim_splitTerminal {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp COLON &kp S &kp P &kp L &kp I &kp T &kp SPACE &kp PIPE &kp SPACE &kp T &kp E &kp R &kp M &kp I &kp N &kp A &kp L &kp RET>;
+            label = "NVIM_SPLITTERMINAL";
+        };
+
+        nvim_focus_off_term: normal_from_terminal {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(NON_US_BACKSLASH) &kp LC(N)>;
+            label = "NORMAL_FROM_TERMINAL";
+        };
+
+        nvim_close_splits: nvim_close_splits {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp COLON &kp O &kp N &kp L &kp Y>;
+            label = "NVIM_CLOSE_SPLITS";
+        };
     };
 
     keymap {
@@ -50,11 +71,11 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&kp EQUAL  &kp N1         &kp N2     &kp N3      &kp N4     &kp N5  &tog 1                                                        &mo 3      &kp N6  &kp N7  &kp N8    &kp N9    &kp N0    &kp MINUS
-&kp TAB    &kp SQT        &kp COMMA  &kp PERIOD  &kp P      &kp Y   &none                                                         &none      &kp F   &kp G   &kp C     &kp R     &kp L     &kp BSLH
-&kp ESC    &kp A          &kp O      &kp E       &kp U      &kp I   &none     &kp LGUI  &kp LALT       &kp LGUI        &kp RCTRL  &none      &kp D   &kp H   &kp T     &kp N     &kp S     &kp SLASH
-&kp LSHFT  &kp SEMICOLON  &kp Q      &kp J       &kp K      &kp X                       &kp LG(C)      &studio_unlock                        &kp B   &kp M   &kp W     &kp V     &kp Z     &kp RSHFT
-&mo 2      &kp GRAVE      &kp CAPS   &kp LEFT    &kp RIGHT          &kp BSPC  &kp DEL   &kp LG(V)      &kp PG_DN       &kp ENTER  &kp SPACE          &kp UP  &kp DOWN  &kp LBKT  &kp RBKT  &mo 2
+&kp EQUAL  &kp N1         &kp N2     &kp N3      &kp N4     &kp N5  &tog 1                                                  &mo 3      &kp N6  &kp N7  &kp N8    &kp N9    &kp N0    &kp MINUS
+&kp TAB    &kp SQT        &kp COMMA  &kp PERIOD  &kp P      &kp Y   &none                                                   &none      &kp F   &kp G   &kp C     &kp R     &kp L     &kp BSLH
+&kp ESC    &kp A          &kp O      &kp E       &kp U      &kp I   &none     &kp LGUI  &kp LALT       &kp LGUI  &kp RCTRL  &none      &kp D   &kp H   &kp T     &kp N     &kp S     &kp SLASH
+&kp LSHFT  &kp SEMICOLON  &kp Q      &kp J       &kp K      &kp X                       &kp LG(C)      &vimquit                        &kp B   &kp M   &kp W     &kp V     &kp Z     &kp RSHFT
+&mo 2      &kp GRAVE      &kp CAPS   &kp LEFT    &kp RIGHT          &kp BSPC  &kp DEL   &kp LG(V)      &vimsave  &kp ENTER  &kp SPACE          &kp UP  &kp DOWN  &kp LBKT  &kp RBKT  &mo 2
             >;
         };
 
@@ -113,11 +134,11 @@
 
         nvim_shortcuts {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&trans                &vim_showNum  &trans  &trans  &trans  &trans  &trans                                                    &trans  &trans  &trans  &trans               &trans  &trans  &trans
+&trans                &trans        &trans  &trans  &trans  &trans  &trans                                                    &trans  &trans  &trans  &trans               &trans  &trans  &trans
+&nvim_focus_off_term  &trans        &trans  &trans  &trans  &trans  &trans              &trans  &trans      &trans    &trans  &trans  &trans  &trans  &nvim_splitTerminal  &trans  &trans  &trans
+&trans                &trans        &trans  &trans  &trans  &trans                              &trans      &vimquit                  &trans  &trans  &trans               &trans  &trans  &trans
+&trans                &trans        &trans  &trans  &trans          &nvim_close_splits  &trans  &trans      &vimsave  &trans  &trans          &trans  &trans               &trans  &trans  &trans
             >;
         };
 
