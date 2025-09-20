@@ -87,5 +87,15 @@
             display-name = "Yellow";
             status = "reserved";
         };
+
+        Shortcuts {
+            bindings = <
+&trans  &kp LC(LA(LEFT))      &kp LA(LG(RIGHT))     &kp LA(LC(E))  &kp LA(LC(T))  &kp LA(LC(I))  &trans                                             &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans                &trans                &trans         &kp LA(LC(D))  &kp LA(LC(K))  &trans                                             &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LS(LG(NUMBER_3))  &kp LS(LG(NUMBER_4))  &trans         &kp LA(LC(F))  &kp LA(LC(U))  &kp LS(LG(V))  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans                &trans                &trans         &kp LA(LC(G))  &kp LA(LC(J))                         &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans                &trans                &trans         &trans                        &trans         &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+            >;
+        };
     };
 };
