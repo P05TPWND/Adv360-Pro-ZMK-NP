@@ -75,7 +75,7 @@
 &kp TAB    &kp SQT        &kp COMMA  &kp PERIOD  &kp P      &kp Y   &none                                                   &none      &kp F   &kp G   &kp C     &kp R     &kp L     &kp BSLH
 &kp ESC    &kp A          &kp O      &kp E       &kp U      &kp I   &none     &kp LGUI  &kp LALT       &kp LGUI  &kp RCTRL  &none      &kp D   &kp H   &kp T     &kp N     &kp S     &kp SLASH
 &kp LSHFT  &kp SEMICOLON  &kp Q      &kp J       &kp K      &kp X                       &kp LG(C)      &vimquit                        &kp B   &kp M   &kp W     &kp V     &kp Z     &kp RSHFT
-&mo 2      &kp GRAVE      &kp CAPS   &kp LEFT    &kp RIGHT          &kp BSPC  &kp DEL   &kp LG(V)      &vimsave  &kp ENTER  &kp SPACE          &kp UP  &kp DOWN  &kp LBKT  &kp RBKT  &mo 2
+&mo 10     &kp GRAVE      &kp CAPS   &kp LEFT    &kp RIGHT          &kp BSPC  &kp DEL   &kp LG(V)      &vimsave  &kp ENTER  &kp SPACE          &kp UP  &kp DOWN  &kp LBKT  &kp RBKT  &mo 2
             >;
         };
 
@@ -93,11 +93,11 @@
         fn {
             display-name = "Fn";
             bindings = <
-&kp F1  &kp F2         &kp F3  &kp F4              &kp F5         &kp F6  &tog 1                                      &mo 3   &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
-&trans  &trans         &trans  &trans              &trans         &trans  &none                                       &none   &trans  &trans  &trans  &trans   &trans   &trans
-&trans  &kp LC(A)      &trans  &kp LC(E)           &trans         &trans  &tog 6  &trans  &trans      &trans  &trans  &none   &trans  &trans  &trans  &trans   &trans   &trans
-&trans  &kp LC(LG(Q))  &trans  &kp LC(UP_ARROW)    &trans         &trans                  &trans      &trans                  &trans  &trans  &trans  &trans   &trans   &trans
-&trans  &tog 4         &tog 5  &kp LC(LEFT_ARROW)  &kp LC(RIGHT)          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans   &trans   &trans
+&kp F1  &kp F2         &kp F3  &kp F4              &kp F5         &kp F6  &tog 1                                       &mo 3   &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
+&trans  &trans         &trans  &trans              &trans         &trans  &none                                        &none   &trans  &trans  &trans  &trans   &trans   &trans
+&trans  &kp LC(A)      &trans  &kp LC(E)           &trans         &trans  &tog 10  &trans  &trans      &trans  &trans  &none   &trans  &trans  &trans  &trans   &trans   &trans
+&trans  &kp LC(LG(Q))  &trans  &kp LC(UP_ARROW)    &trans         &trans                   &trans      &trans                  &trans  &trans  &trans  &trans   &trans   &trans
+&trans  &tog 9         &tog 8  &kp LC(LEFT_ARROW)  &kp LC(RIGHT)          &trans   &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans   &trans   &trans
             >;
         };
 
@@ -118,7 +118,7 @@
 &trans  &trans                &trans                &trans         &kp LA(LC(D))  &kp LA(LC(K))  &trans                                             &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp LS(LG(NUMBER_3))  &kp LS(LG(NUMBER_4))  &trans         &kp LA(LC(F))  &kp LA(LC(U))  &kp LS(LG(V))  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans                &trans                &trans         &kp LA(LC(G))  &kp LA(LC(J))                         &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&mo 2   &trans                &trans                &trans         &trans                        &trans         &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&trans  &trans                &trans                &trans         &trans                        &trans         &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
 
@@ -128,7 +128,7 @@
 &trans     &kp Q   &kp W   &kp E     &kp R      &kp T   &trans                                               &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans     &kp A   &kp S   &kp D     &kp F      &kp G   &trans     &kp LGUI   &kp LALT       &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &kp LSHFT  &kp Z   &kp X   &kp C     &kp V      &kp B                         &kp LCTRL      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&mo 2      &trans  &trans  &kp LEFT  &kp RIGHT          &kp SPACE  &kp ENTER  &kp M          &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&trans     &trans  &trans  &kp LEFT  &kp RIGHT          &kp SPACE  &kp ENTER  &kp M          &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
 
@@ -138,7 +138,7 @@
 &trans                &trans        &trans  &trans  &trans  &trans  &trans                                                    &trans  &trans  &trans  &trans               &trans  &trans  &trans
 &nvim_focus_off_term  &trans        &trans  &trans  &trans  &trans  &trans              &trans  &trans      &trans    &trans  &trans  &trans  &trans  &nvim_splitTerminal  &trans  &trans  &trans
 &trans                &trans        &trans  &trans  &trans  &trans                              &trans      &vimquit                  &trans  &trans  &trans               &trans  &trans  &trans
-&mo 2                 &trans        &trans  &trans  &trans          &nvim_close_splits  &trans  &trans      &vimsave  &trans  &trans          &trans  &trans               &trans  &trans  &trans
+&trans                &trans        &trans  &trans  &trans          &nvim_close_splits  &trans  &trans      &vimsave  &trans  &trans          &trans  &trans               &trans  &trans  &trans
             >;
         };
 
@@ -168,16 +168,21 @@
 
         purple_is_5 {
             if-layers = <8>;
-            then-layer = <4>;
+            then-layer = <5>;
         };
 
-        red_is_4 {
+        red_is_2 {
             if-layers = <7>;
+            then-layer = <2>;
+        };
+
+        cyan_is_4 {
+            if-layers = <9>;
             then-layer = <4>;
         };
 
-        cyan_is_6 {
-            if-layers = <9>;
+        yellow_is_6 {
+            if-layers = <10>;
             then-layer = <6>;
         };
     };
