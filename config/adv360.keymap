@@ -112,6 +112,26 @@
             >;
         };
 
+        extra1 {
+            display-name = "Red";
+            status = "reserved";
+        };
+
+        extra2 {
+            display-name = "Purple";
+            status = "reserved";
+        };
+
+        extra3 {
+            display-name = "Cyan";
+            status = "reserved";
+        };
+
+        extra4 {
+            display-name = "Yellow";
+            status = "reserved";
+        };
+
         Shortcuts {
             bindings = <
 &trans  &kp LC(LA(LEFT))      &kp LA(LG(RIGHT))     &kp LA(LC(E))  &kp LA(LC(T))  &kp LA(LC(I))  &trans                                             &trans  &trans  &trans  &trans  &trans  &trans  &trans
@@ -141,37 +161,24 @@
 &trans                &trans        &trans  &trans  &trans          &nvim_close_splits  &trans  &trans      &vimsave  &trans  &trans          &trans  &trans               &trans  &trans  &trans
             >;
         };
-
-        Empy {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
-            >;
-        };
-
-        extra1 {
-            display-name = "Red";
-            status = "reserved";
-        };
-
-        extra2 {
-            display-name = "Purple";
-            status = "reserved";
-        };
-
-        extra3 {
-            display-name = "Cyan";
-            status = "reserved";
-        };
-
-        extra4 {
-            display-name = "Yellow";
-            status = "reserved";
-        };
     };
 
-    conditional_layers { compatible = "zmk,conditional-layers"; };
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        Red_to_8 {
+            if-layers = <4>;
+            then-layer = <8>;
+        };
+
+        Purple_to_9 {
+            if-layers = <5>;
+            then-layer = <9>;
+        };
+
+        Cyan_to_10 {
+            if-layers = <6>;
+            then-layer = <10>;
+        };
+    };
 };
