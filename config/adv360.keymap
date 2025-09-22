@@ -162,4 +162,23 @@
             status = "reserved";
         };
     };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        purple_is_5 {
+            if-layers = <8>;
+            then-layer = <4>;
+        };
+
+        red_is_4 {
+            if-layers = <7>;
+            then-layer = <4>;
+        };
+
+        cyan_is_6 {
+            if-layers = <9>;
+            then-layer = <6>;
+        };
+    };
 };
