@@ -63,6 +63,13 @@
             bindings = <&kp COLON &kp O &kp N &kp L &kp Y>;
             label = "NVIM_CLOSE_SPLITS";
         };
+
+        nvim_enterNVIM: nvim_enterNVIM {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N &kp V &kp I &kp M &kp RET &kp SPACE &kp E>;
+            label = "NVIM_ENTERNVIM";
+        };
     };
 
     keymap {
@@ -134,11 +141,11 @@
 
         nvim_shortcuts {
             bindings = <
-&trans                &vim_showNum  &trans  &trans  &trans  &trans  &trans                                                    &trans  &trans  &trans  &trans               &trans  &trans  &trans
-&trans                &trans        &trans  &trans  &trans  &trans  &trans                                                    &trans  &trans  &trans  &trans               &trans  &trans  &trans
-&nvim_focus_off_term  &trans        &trans  &trans  &trans  &trans  &trans              &trans  &trans      &trans    &trans  &trans  &trans  &trans  &nvim_splitTerminal  &trans  &trans  &trans
-&trans                &trans        &trans  &trans  &trans  &trans                              &trans      &vimquit                  &trans  &trans  &trans               &trans  &trans  &trans
-&trans                &trans        &trans  &trans  &trans          &nvim_close_splits  &trans  &trans      &vimsave  &trans  &trans          &trans  &trans               &trans  &trans  &trans
+&trans                &vim_showNum  &trans  &trans  &trans  &trans  &trans                                                    &trans  &trans  &trans  &trans               &trans           &trans  &trans
+&trans                &trans        &trans  &trans  &trans  &trans  &trans                                                    &trans  &trans  &trans  &trans               &trans           &trans  &trans
+&nvim_focus_off_term  &trans        &trans  &trans  &trans  &trans  &trans              &trans  &trans      &trans    &trans  &trans  &trans  &trans  &nvim_splitTerminal  &nvim_enterNVIM  &trans  &trans
+&trans                &trans        &trans  &trans  &trans  &trans                              &trans      &vimquit                  &trans  &trans  &trans               &trans           &trans  &trans
+&trans                &trans        &trans  &trans  &trans          &nvim_close_splits  &trans  &trans      &vimsave  &trans  &trans          &trans  &trans               &trans           &trans  &trans
             >;
         };
 
