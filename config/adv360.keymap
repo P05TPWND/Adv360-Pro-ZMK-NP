@@ -61,8 +61,8 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&kp LC(BACKSLASH) &kp LC(N) &nvim_quit>,
-                <&macro_wait_time 1>,
+                <&kp LC(BACKSLASH) &kp LC(N) &kp COLON &kp Q &kp ENTER>,
+                <&macro_wait_time 100>,
                 <&kp SPACE &kp B &kp R>;
 
             label = "NVIM_CLOSE_SPLITS";
