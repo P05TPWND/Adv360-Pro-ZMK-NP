@@ -121,11 +121,11 @@
         fn {
             display-name = "Fn";
             bindings = <
-&kp F1  &kp F2         &kp F3  &kp F4              &kp F5         &kp F6  &tog 1                                                      &mo 3   &kp F7  &kp F8  &kp F9               &kp F10  &kp F11  &kp F12
-&trans  &trans         &trans  &trans              &trans         &trans  &none                                                       &none   &trans  &trans  &trans               &trans   &trans   &trans
-&trans  &kp LC(A)      &trans  &kp LC(E)           &trans         &trans  &tog 6                  &trans  &trans      &trans  &trans  &none   &trans  &trans  &nvim_splitTerminal  &trans   &trans   &trans
-&trans  &kp LC(LG(Q))  &trans  &kp LC(UP_ARROW)    &nvim_start    &trans                                  &trans      &trans                  &trans  &trans  &trans               &trans   &trans   &trans
-&trans  &tog 4         &tog 5  &kp LC(LEFT_ARROW)  &kp LC(RIGHT)          &nvim_exit_splitWindow  &trans  &trans      &trans  &trans  &trans          &trans  &trans               &trans   &trans   &trans
+&kp F1  &kp F2         &kp F3  &kp F4              &kp F5         &kp F6         &tog 1                                                      &mo 3   &kp F7  &kp F8  &kp F9               &kp F10  &kp F11  &kp F12
+&trans  &trans         &trans  &trans              &trans         &trans         &none                                                       &none   &trans  &trans  &trans               &trans   &trans   &trans
+&trans  &kp LC(A)      &trans  &kp LC(E)           &trans         &kp LS(LG(V))  &tog 6                  &trans  &trans      &trans  &trans  &none   &trans  &trans  &nvim_splitTerminal  &trans   &trans   &trans
+&trans  &kp LC(LG(Q))  &trans  &kp LC(UP_ARROW)    &nvim_start    &trans                                         &trans      &trans                  &trans  &trans  &trans               &trans   &trans   &trans
+&trans  &tog 4         &tog 5  &kp LC(LEFT_ARROW)  &kp LC(RIGHT)                 &nvim_exit_splitWindow  &trans  &trans      &trans  &trans  &trans          &trans  &trans               &trans   &trans   &trans
             >;
         };
 
@@ -142,11 +142,11 @@
 
         Shortcuts {
             bindings = <
-&trans  &kp LC(LA(LEFT))      &kp LC(LA(RIGHT))     &kp LA(LC(E))      &kp LA(LC(T))  &kp LA(LC(I))  &trans                                                     &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans                &trans                &trans             &kp LA(LC(D))  &kp LA(LC(K))  &trans                                                     &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LS(LG(NUMBER_3))  &kp LS(LG(NUMBER_4))  &kp LC(LG(SPACE))  &kp LA(LC(F))  &kp LA(LC(U))  &kp LS(LG(V))  &trans          &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans                &trans                &trans             &kp LA(LC(G))  &kp LA(LC(J))                                 &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans                &trans                &iterm_L_Pn        &iterm_R_Pn                   &trans         &kp LS(ESCAPE)  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&trans  &kp LC(LA(LEFT))      &kp LC(LA(RIGHT))     &kp LA(LC(E))      &kp LA(LC(T))  &kp LA(LC(I))  &trans                                              &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans                &trans                &trans             &kp LA(LC(D))  &kp LA(LC(K))  &trans                                              &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LS(LG(NUMBER_3))  &kp LS(LG(NUMBER_4))  &kp LC(LG(SPACE))  &kp LA(LC(F))  &kp LA(LC(U))  &trans  &trans          &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans                &trans                &trans             &kp LA(LC(G))  &kp LA(LC(J))                          &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans                &trans                &iterm_L_Pn        &iterm_R_Pn                   &trans  &kp LS(ESCAPE)  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
 
