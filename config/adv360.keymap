@@ -53,14 +53,14 @@
         nvim_focus_off_term: normal_from_terminal {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(NON_US_BACKSLASH) &kp LC(N)>;
+            bindings = <&kp LC(BACKSLASH) &kp LC(N)>;
             label = "NORMAL_FROM_TERMINAL";
         };
 
         nvim_exit_splitWindow: nvim_close_splits {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(NON_US_BACKSLASH) &kp LC(N) &kp SPACE &kp B &kp D>;
+            bindings = <&kp LC(BACKSLASH) &kp LC(N) &kp SPACE &kp B &kp D>;
             label = "NVIM_CLOSE_SPLITS";
         };
 
