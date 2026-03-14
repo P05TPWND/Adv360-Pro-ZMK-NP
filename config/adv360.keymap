@@ -77,6 +77,20 @@
             bindings = <&kp N &kp V &kp I &kp M &kp RET>;
             label = "NVIM_START";
         };
+
+        iterm_R_Pn: iterm_lft_Pn {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(RIGHT_BRACKET)>;
+            label = "ITERM_LFT_PN";
+        };
+
+        iterm_L_Pn: iterm_L_Pn {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(LEFT_BRACKET)>;
+            label = "ITERM_L_PN";
+        };
     };
 
     keymap {
@@ -132,7 +146,7 @@
 &trans  &trans                &trans                &trans             &kp LA(LC(D))  &kp LA(LC(K))  &trans                                                     &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp LS(LG(NUMBER_3))  &kp LS(LG(NUMBER_4))  &kp LC(LG(SPACE))  &kp LA(LC(F))  &kp LA(LC(U))  &kp LS(LG(V))  &trans          &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans                &trans                &trans             &kp LA(LC(G))  &kp LA(LC(J))                                 &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans                &trans                &trans             &trans                        &trans         &kp LS(ESCAPE)  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&trans  &trans                &trans                &iterm_L_Pn        &iterm_R_Pn                   &trans         &kp LS(ESCAPE)  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
 
