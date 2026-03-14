@@ -60,7 +60,11 @@
         nvim_exit_splitWindow: nvim_close_splits {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(BACKSLASH) &kp LC(N) &nvim_quit &kp SPACE &kp B &kp R>;
+            bindings =
+                <&kp LC(BACKSLASH) &kp LC(N) &nvim_quit>,
+                <&macro_wait_time 1>,
+                <&kp SPACE &kp B &kp R>;
+
             label = "NVIM_CLOSE_SPLITS";
         };
 
