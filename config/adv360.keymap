@@ -57,18 +57,25 @@
             label = "NORMAL_FROM_TERMINAL";
         };
 
-        nvim_close_splits: nvim_close_splits {
+        nvim_exit_splitWindow: nvim_close_splits {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp COLON &kp O &kp N &kp L &kp Y>;
+            bindings = <&kp LC(NON_US_BACKSLASH) &kp LC(N) &kp SPACE &kp B &kp D>;
             label = "NVIM_CLOSE_SPLITS";
         };
 
-        nvim_enterNVIM: nvim_enterNVIM {
+        nvim_explorer: nvim_explorer {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp N &kp V &kp I &kp M &kp RET &kp SPACE &kp E>;
-            label = "NVIM_ENTERNVIM";
+            bindings = <&kp SPACE &kp E>;
+            label = "NVIM_EXPLORER";
+        };
+
+        nvim_start: nvim_start {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N &kp V &kp I &kp M &kp RET>;
+            label = "NVIM_START";
         };
     };
 
@@ -100,11 +107,11 @@
         fn {
             display-name = "Fn";
             bindings = <
-&kp F1  &kp F2         &kp F3  &kp F4              &kp F5         &kp F6  &tog 1                                      &mo 3   &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
-&trans  &trans         &trans  &trans              &trans         &trans  &none                                       &none   &trans  &trans  &trans  &trans   &trans   &trans
-&trans  &kp LC(A)      &trans  &kp LC(E)           &trans         &trans  &tog 6  &trans  &trans      &trans  &trans  &none   &trans  &trans  &trans  &trans   &trans   &trans
-&trans  &kp LC(LG(Q))  &trans  &kp LC(UP_ARROW)    &trans         &trans                  &trans      &trans                  &trans  &trans  &trans  &trans   &trans   &trans
-&trans  &tog 4         &tog 5  &kp LC(LEFT_ARROW)  &kp LC(RIGHT)          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans   &trans   &trans
+&kp F1  &kp F2         &kp F3  &kp F4              &kp F5         &kp F6  &tog 1                                                      &mo 3   &kp F7  &kp F8  &kp F9               &kp F10  &kp F11  &kp F12
+&trans  &trans         &trans  &trans              &trans         &trans  &none                                                       &none   &trans  &trans  &trans               &trans   &trans   &trans
+&trans  &kp LC(A)      &trans  &kp LC(E)           &trans         &trans  &tog 6                  &trans  &trans      &trans  &trans  &none   &trans  &trans  &nvim_splitTerminal  &trans   &trans   &trans
+&trans  &kp LC(LG(Q))  &trans  &kp LC(UP_ARROW)    &nvim_start    &trans                                  &trans      &trans                  &trans  &trans  &trans               &trans   &trans   &trans
+&trans  &tog 4         &tog 5  &kp LC(LEFT_ARROW)  &kp LC(RIGHT)          &nvim_exit_splitWindow  &trans  &trans      &trans  &trans  &trans          &trans  &trans               &trans   &trans   &trans
             >;
         };
 
@@ -141,11 +148,11 @@
 
         nvim_shortcuts {
             bindings = <
-&trans                &vim_showNum  &trans  &trans  &trans  &trans  &trans                                                      &trans  &trans  &trans  &trans               &trans           &trans  &trans
-&trans                &trans        &trans  &trans  &trans  &trans  &trans                                                      &trans  &trans  &trans  &trans               &trans           &trans  &trans
-&nvim_focus_off_term  &trans        &trans  &trans  &trans  &trans  &trans              &trans  &trans      &trans      &trans  &trans  &trans  &trans  &nvim_splitTerminal  &nvim_enterNVIM  &trans  &trans
-&trans                &trans        &trans  &trans  &trans  &trans                              &trans      &nvim_quit                  &trans  &trans  &trans               &trans           &trans  &trans
-&trans                &trans        &trans  &trans  &trans          &nvim_close_splits  &trans  &trans      &nvim_save  &trans  &trans          &trans  &trans               &trans           &trans  &trans
+&trans                &vim_showNum  &trans          &trans  &trans  &trans  &trans                                                          &trans  &trans  &trans  &trans               &trans  &trans  &trans
+&trans                &trans        &trans          &trans  &trans  &trans  &trans                                                          &trans  &trans  &trans  &trans               &trans  &trans  &trans
+&nvim_focus_off_term  &trans        &nvim_explorer  &trans  &trans  &trans  &trans                  &trans  &trans      &trans      &trans  &trans  &trans  &trans  &nvim_splitTerminal  &trans  &trans  &trans
+&trans                &trans        &trans          &trans  &trans  &trans                                  &trans      &nvim_quit                  &trans  &trans  &trans               &trans  &trans  &trans
+&trans                &trans        &trans          &trans  &trans          &nvim_exit_splitWindow  &trans  &trans      &nvim_save  &trans  &trans          &trans  &trans               &trans  &trans  &trans
             >;
         };
 
