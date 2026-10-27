@@ -117,7 +117,7 @@
         nvim_qall: nvim_qall {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp COLON &kp Q &kp A &kp L &kp L>;
+            bindings = <&kp COLON &kp Q &kp A &kp L &kp L &kp ENTER>;
             label = "NVIM_QALL";
         };
     };
