@@ -26,7 +26,7 @@
             bindings = <&nvim_qall>, <&nvim_quit>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <5>;
+            tapping-term-ms = <200>;
         };
 
         nvim_saveQall: nvim_saveQall {
@@ -35,7 +35,7 @@
             bindings = <&nvim_qall>, <&nvim_save>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <5>;
+            tapping-term-ms = <200>;
         };
     };
 
